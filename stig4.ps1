@@ -1,3 +1,4 @@
+#Requires -RunAsAdministrator
 # Defining the registry path:
 $registryPath = "HKLM:\SOFTWARE\Policies\Microsoft\FVE"
 
