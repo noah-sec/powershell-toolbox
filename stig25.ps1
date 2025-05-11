@@ -1,2 +1,2 @@
 #Requires -RunAsAdministrator
-auditpol.exe /set /subcategory:"Removable Storage" /failure:enable
+AuditPol /set /subcategory:"Removable Storage" /failure:enable
