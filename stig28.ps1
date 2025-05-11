@@ -1,3 +1,4 @@
+#Requires -RunAsAdministrator
 # Defining the registry path and registry value:
 $registryPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\System\"
 $valueName = "MaxSize"
