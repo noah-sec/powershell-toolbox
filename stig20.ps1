@@ -1,2 +1,2 @@
 #Requires -RunAsAdministrator
-& auditpol.exe /set /subcategory:"Group Membership" /success:enable
+AuditPol /set /subcategory:"Group Membership" /success:enable
