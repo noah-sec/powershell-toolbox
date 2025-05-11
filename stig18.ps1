@@ -1,2 +1,2 @@
 #Requires -RunAsAdministrator
-& auditpol.exe /set /subcategory:"Process Creation" /success:enable
+AuditPol /set /subcategory:"Process Creation" /success:enable
