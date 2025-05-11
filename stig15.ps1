@@ -1,2 +1,2 @@
 #Requires -RunAsAdministrator
-& auditpol.exe /set /subcategory:"Credential Validation" /Success:enable
+AuditPol /set /subcategory:"Credential Validation" /Success:enable
