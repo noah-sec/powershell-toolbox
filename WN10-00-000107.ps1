@@ -1,6 +1,9 @@
 <#
 .SYNOPSIS
     This PowerShell script disables Windows Copilot.
+
+.DESCRIPTION
+    Requires elevated PowerShell session (run as Administrator).
     
 .NOTES
     Author          : Noah Grayson
