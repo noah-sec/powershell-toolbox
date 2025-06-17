@@ -1,2 +1,0 @@
-#Requires -RunAsAdministrator
-Disable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
