@@ -15,4 +15,4 @@
 #Requires -RunAsAdministrator
 
 # Configures the audit policy to enable auditing for success events in the "Process Creation" subcategory.
-AuditPol /set /subcategory:"Process Creation" /success:
+AuditPol /set /subcategory:"Process Creation" /success:enable
