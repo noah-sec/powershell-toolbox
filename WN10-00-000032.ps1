@@ -1,6 +1,9 @@
 <#
 .SYNOPSIS
     This PowerShell script configures BitLocker to enforce a minimum PIN length of 6 characters for startup.
+
+.DESCRIPTION
+    Requires elevated PowerShell session (run as Administrator).
     
 .NOTES
     Author          : Noah Grayson
