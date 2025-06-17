@@ -1,6 +1,9 @@
 <#
 .SYNOPSIS
     This PowerShell script configures BitLocker to allow enhanced startup options, including the use of a startup PIN with a Trusted Platform Module (TPM).
+
+.DESCRIPTION
+    Requires elevated PowerShell session (run as Administrator).
     
 .NOTES
     Author          : Noah Grayson
