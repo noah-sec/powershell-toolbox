@@ -14,5 +14,5 @@
 #>
 #Requires -RunAsAdministrator
 
-# Disables the Windows PowerShell Version 2 Root optional feature on the online operating system.
+# Disables the Windows PowerShell Version 2 Root optional feature.
 Disable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
