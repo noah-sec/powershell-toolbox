@@ -1,16 +1,28 @@
+<#
+.SYNOPSIS
+    This PowerShell script configures BitLocker to allow enhanced startup options, including the use of a startup PIN with a Trusted Platform Module (TPM).
+    
+.NOTES
+    Author          : Noah Grayson
+    STIG-ID         : WN10-00-000031
+    
+.EXAMPLE
+    .\WN10-00-000031.ps1
+#>
 #Requires -RunAsAdministrator
-# Defining the common registry path:
+
+# Defines the common registry path for BitLocker settings.
 $registryPath = "HKLM:\SOFTWARE\Policies\Microsoft\FVE"
 
-# Configuring advanced startup (to use Bitlocker without TPM):
+# Defines the registry value to enable advanced startup options for BitLocker.
 $valueName1 = "UseAdvancedStartup"
 $valueData1 = 1
 
-# Configuring startup PIN with TPM:
+# Defines the registry value to require a startup PIN when BitLocker is used with a TPM.
 $valueName2 = "UseTPMPIN"
 $valueData2 = 1
 
-# Checking for registry path, if none then creating path:
+# Checks if the BitLocker registry path exists and creates it if it doesn't.
 if (-not (Test-Path $registryPath)) {
     Write-Host "Registry path '$registryPath' not found. Creating it now."
     New-Item -Path $registryPath -Force
@@ -18,13 +30,13 @@ if (-not (Test-Path $registryPath)) {
     Write-Host "Registry path '$registryPath' already exists."
 }
 
-# Setting value for UseAdvancedStartup:
+# Sets the 'UseAdvancedStartup' registry value.
 Set-ItemProperty -Path $registryPath -Name $valueName1 -Value $valueData1 -Type DWord -Force
-# Setting output message:
+# Confirms that the 'UseAdvancedStartup' registry value has been set.
 Write-Host "Registry value '$valueName1' set to '$valueData1' at '$registryPath'."
 
-# Setting value for UseTPMPIN:
+# Sets the 'UseTPMPIN' registry value.
 Set-ItemProperty -Path $registryPath -Name $valueName2 -Value $valueData2 -Type DWord -Force
-# Setting output message:
+# Confirms that the 'UseTPMPIN' registry value has been set.
 Write-Host "Registry value '$valueName2' set to '$valueData2' at '$registryPath'."
 Write-Host "Script complete."
