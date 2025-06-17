@@ -1,6 +1,9 @@
 <#
 .SYNOPSIS
     This PowerShell script sets the maximum password age for user accounts to 90 days.
+
+.DESCRIPTION
+    Requires elevated PowerShell session (run as Administrator).
     
 .NOTES
     Author          : Noah Grayson
