@@ -1,6 +1,9 @@
 <#
 .SYNOPSIS
     This PowerShell script configures Data Execution Prevention (DEP) for the current boot entry to "OptOut".
+
+.DESCRIPTION
+    Requires elevated PowerShell session (run as Administrator).
     
 .NOTES
     Author          : Noah Grayson
